@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 0 83% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -61,8 +64,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 83% 53%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -96,6 +99,34 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Inter',sans-serif];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  .airbnb-gradient {
+    @apply bg-gradient-to-r from-airbnb to-airbnb-light;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-16;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-10 text-center;
+  }
+  
+  .section-subtitle {
+    @apply text-xl mb-6 text-gray-600 text-center max-w-3xl mx-auto;
+  }
+  
+  .wireframe {
+    @apply border border-gray-200 rounded-lg p-4 bg-white shadow-sm;
+  }
+  
+  .card-highlight {
+    @apply border-l-4 border-airbnb pl-4 py-2 bg-airbnb-light_gray;
   }
 }
