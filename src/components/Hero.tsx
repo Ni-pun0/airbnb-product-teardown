@@ -12,7 +12,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/058fdaad-47e7-4b8f-bc5a-1b199c276ebc.png" 
               alt="Airbnb Logo" 
-              className="h-12 md:h-16" 
+              className="h-12 md:h-16 object-contain mix-blend-multiply"
             />
           </div>
           <div className="max-w-3xl">
