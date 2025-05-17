@@ -5,6 +5,10 @@ import { cn } from '@/lib/utils';
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const Header = ({ className, ...props }: HeaderProps) => {
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <header className={cn("py-6 sticky top-0 z-50 bg-white bg-opacity-90 backdrop-blur-md border-b", className)} {...props}>
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
@@ -12,7 +16,8 @@ const Header = ({ className, ...props }: HeaderProps) => {
           <img 
             src="/lovable-uploads/058fdaad-47e7-4b8f-bc5a-1b199c276ebc.png" 
             alt="Airbnb Logo" 
-            className="h-8 w-auto object-contain mix-blend-multiply"
+            className="h-8 w-auto object-contain cursor-pointer"
+            onClick={refreshPage}
           />
           <h1 className="text-xl font-bold tracking-tight">Airbnb Product Teardown</h1>
         </div>
