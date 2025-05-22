@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
+
 interface SectionTitleProps {
   title: string;
   subtitle?: string;
@@ -7,6 +9,7 @@ interface SectionTitleProps {
   className?: string;
   accentColor?: string;
 }
+
 const SectionTitle = ({
   title,
   subtitle,
@@ -20,7 +23,8 @@ const SectionTitle = ({
         {title}
         <div className={`absolute -bottom-1 left-0 h-1 w-3/4 bg-${accentColor} opacity-30`}></div>
       </h2>
-      {subtitle && <p className="section-subtitle text-lg text-gray-600 max-w-3xl text-left">{subtitle}</p>}
+      {subtitle && <p className="section-subtitle text-lg text-gray-600 max-w-3xl">{subtitle}</p>}
     </div>;
 };
+
 export default SectionTitle;
