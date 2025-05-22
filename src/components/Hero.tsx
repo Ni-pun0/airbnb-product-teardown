@@ -1,14 +1,12 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 const Hero = () => {
   return <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-airbnb to-airbnb-light opacity-10 z-0"></div>
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-20 md:py-32 relative z-10">
         <div className="flex flex-col items-start">
           <div className="mb-6">
-            <img src="/lovable-uploads/058fdaad-47e7-4b8f-bc5a-1b199c276ebc.png" alt="Airbnb Logo" className="h-12 md:h-16 object-contain mix-blend-multiply" />
+            
           </div>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6"> Product Teardown</h1>
@@ -26,14 +24,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div
-        className="absolute -right-24 -bottom-24 w-2/3 md:w-1/2 h-[120%] bg-contain bg-no-repeat bg-right-bottom z-0"
-        style={{
-          backgroundImage: "url('/lovable-uploads/fa6f9d34-0176-410d-879a-137a69167faf.png')",
-          transform: "rotate(5deg)"
-        }}
-      ></div>
+      <div className="absolute -right-24 -bottom-24 w-2/3 md:w-1/2 h-[120%] bg-contain bg-no-repeat bg-right-bottom z-0" style={{
+      backgroundImage: "url('/lovable-uploads/fa6f9d34-0176-410d-879a-137a69167faf.png')",
+      transform: "rotate(5deg)"
+    }}></div>
     </div>;
 };
-
 export default Hero;
