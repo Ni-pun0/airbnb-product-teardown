@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -14,47 +13,37 @@ import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-
 const Index = () => {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-up');
-            entry.target.classList.remove('opacity-0');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-up');
+          entry.target.classList.remove('opacity-0');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
       el.classList.add('opacity-0');
       observer.observe(el);
     });
-
     return () => {
-      document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header />
       <Hero />
 
       {/* Overview Section */}
       <section id="overview" className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="1. Product Understanding & Overview" 
-            subtitle="Airbnb is a two-sided marketplace that connects travelers with hosts offering unique accommodations around the world." 
-            accentColor="airbnb"
-          />
+          <SectionTitle title="1. Product Understanding & Overview" subtitle="Airbnb is a two-sided marketplace that connects travelers with hosts offering unique accommodations around the world." accentColor="airbnb" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Wireframe title="Platform Foundation" tagStyle="destination">
@@ -150,11 +139,7 @@ const Index = () => {
       {/* Market Analysis Section */}
       <section id="market" className="section-container bg-airbnb-light_gray">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="2. Market & Competitive Analysis" 
-            subtitle="Understanding Airbnb's position in the global hospitality marketplace"
-            accentColor="blue"
-          />
+          <SectionTitle title="2. Market & Competitive Analysis" subtitle="Understanding Airbnb's position in the global hospitality marketplace" accentColor="blue" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Wireframe title="Competitive Landscape" tagStyle="booking">
@@ -182,7 +167,7 @@ const Index = () => {
                 <div className="p-4 border rounded bg-white">
                   <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-base">Marriott Homes</h4>
-                    <div className="text-xs font-bold bg-orange-100 text-orange-800 px-2 py-0.5 rounded-full">12K+ listings</div>
+                    <div className="text-xs font-bold bg-orange-100 text-orange-800 rounded-full px-[20px] py-[4px] my-[4px] mx-[15px]">12K+ listings</div>
                   </div>
                   <p className="text-xs text-gray-600 mb-2">Hotel-backed rentals</p>
                   <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
@@ -263,15 +248,15 @@ const Index = () => {
                   <div className="grid grid-cols-3 gap-2">
                     <div className="bg-white p-2 rounded shadow-sm text-center">
                       <div className="text-lg font-bold text-blue-600">+38%</div>
-                      <p className="text-[10px]">Europe<br/>Year-over-Year</p>
+                      <p className="text-[10px]">Europe<br />Year-over-Year</p>
                     </div>
                     <div className="bg-white p-2 rounded shadow-sm text-center">
                       <div className="text-lg font-bold text-green-600">+42%</div>
-                      <p className="text-[10px]">APAC<br/>Year-over-Year</p>
+                      <p className="text-[10px]">APAC<br />Year-over-Year</p>
                     </div>
                     <div className="bg-white p-2 rounded shadow-sm text-center">
                       <div className="text-lg font-bold text-purple-600">+28%</div>
-                      <p className="text-[10px]">Americas<br/>Year-over-Year</p>
+                      <p className="text-[10px]">Americas<br />Year-over-Year</p>
                     </div>
                   </div>
                 </div>
@@ -317,7 +302,9 @@ const Index = () => {
                         <span className="text-green-600">91%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-500" style={{ width: '91%' }}></div>
+                        <div className="h-full bg-green-500" style={{
+                        width: '91%'
+                      }}></div>
                       </div>
                     </div>
                     <div className="flex flex-col">
@@ -326,7 +313,9 @@ const Index = () => {
                         <span className="text-blue-600">87%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-blue-500" style={{ width: '87%' }}></div>
+                        <div className="h-full bg-blue-500" style={{
+                        width: '87%'
+                      }}></div>
                       </div>
                     </div>
                   </div>
@@ -340,11 +329,7 @@ const Index = () => {
       {/* User Personas Section */}
       <section id="personas" className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="3. User Personas" 
-            subtitle="Understanding key user segments and their unique needs" 
-            accentColor="purple"
-          />
+          <SectionTitle title="3. User Personas" subtitle="Understanding key user segments and their unique needs" accentColor="purple" />
 
           <Tabs defaultValue="guests" className="w-full mb-12">
             <TabsList className="grid w-full grid-cols-2">
@@ -353,48 +338,8 @@ const Index = () => {
             </TabsList>
             <TabsContent value="guests" className="mt-6">
               <div className="grid md:grid-cols-2 gap-8">
-                <PersonaCard
-                  name="Maya"
-                  age={29}
-                  role="Digital Nomad"
-                  avatar="M"
-                  needs={[
-                    "Stylish, WiFi-enabled monthly stays",
-                    "Flexible cancellation",
-                    "Workspace-friendly accommodations"
-                  ]}
-                  motivations={[
-                    "Work-travel lifestyle",
-                    "Discovering new cultures",
-                    "Community connections"
-                  ]}
-                  painPoints={[
-                    "Inconsistent amenities",
-                    "Lack of transparency",
-                    "Unexpected fees"
-                  ]}
-                />
-                <PersonaCard
-                  name="Liam"
-                  age={36}
-                  role="Luxury Seeker"
-                  avatar="L"
-                  needs={[
-                    "Exclusive, high-end curated stays",
-                    "Concierge services",
-                    "Premium amenities"
-                  ]}
-                  motivations={[
-                    "Comfort and prestige",
-                    "Frictionless experience",
-                    "Unique, Instagram-worthy spaces"
-                  ]}
-                  painPoints={[
-                    "Quality inconsistency vs. expectations",
-                    "Service gaps compared to hotels",
-                    "Availability in desired locations"
-                  ]}
-                />
+                <PersonaCard name="Maya" age={29} role="Digital Nomad" avatar="M" needs={["Stylish, WiFi-enabled monthly stays", "Flexible cancellation", "Workspace-friendly accommodations"]} motivations={["Work-travel lifestyle", "Discovering new cultures", "Community connections"]} painPoints={["Inconsistent amenities", "Lack of transparency", "Unexpected fees"]} />
+                <PersonaCard name="Liam" age={36} role="Luxury Seeker" avatar="L" needs={["Exclusive, high-end curated stays", "Concierge services", "Premium amenities"]} motivations={["Comfort and prestige", "Frictionless experience", "Unique, Instagram-worthy spaces"]} painPoints={["Quality inconsistency vs. expectations", "Service gaps compared to hotels", "Availability in desired locations"]} />
               </div>
               
               <div className="mt-6 bg-purple-50 p-4 rounded-lg border border-purple-100">
@@ -405,63 +350,23 @@ const Index = () => {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-white p-3 rounded shadow-sm">
                     <div className="text-lg font-bold text-center text-purple-600">48%</div>
-                    <p className="text-xs text-center">Millennials<br/>(25-40)</p>
+                    <p className="text-xs text-center">Millennials<br />(25-40)</p>
                   </div>
                   <div className="bg-white p-3 rounded shadow-sm">
                     <div className="text-lg font-bold text-center text-purple-600">27%</div>
-                    <p className="text-xs text-center">Gen Z<br/>(18-24)</p>
+                    <p className="text-xs text-center">Gen Z<br />(18-24)</p>
                   </div>
                   <div className="bg-white p-3 rounded shadow-sm">
                     <div className="text-lg font-bold text-center text-purple-600">25%</div>
-                    <p className="text-xs text-center">Gen X & Boomers<br/>(41+)</p>
+                    <p className="text-xs text-center">Gen X & Boomers<br />(41+)</p>
                   </div>
                 </div>
               </div>
             </TabsContent>
             <TabsContent value="hosts" className="mt-6">
               <div className="grid md:grid-cols-2 gap-8">
-                <PersonaCard
-                  name="Jake"
-                  age={42}
-                  role="Property Manager"
-                  avatar="J"
-                  needs={[
-                    "Reliable occupancy",
-                    "Automated workflows",
-                    "Revenue optimization tools"
-                  ]}
-                  motivations={[
-                    "Business scalability",
-                    "Passive income",
-                    "Professional growth"
-                  ]}
-                  painPoints={[
-                    "Damage claims",
-                    "Regulatory compliance",
-                    "Managing reviews and ratings"
-                  ]}
-                />
-                <PersonaCard
-                  name="Aisha"
-                  age={31}
-                  role="Occasional Host"
-                  avatar="A"
-                  needs={[
-                    "Flexibility with calendar",
-                    "Clear instructions",
-                    "Helpful community"
-                  ]}
-                  motivations={[
-                    "Supplemental income",
-                    "Cultural exchange",
-                    "Property utilization"
-                  ]}
-                  painPoints={[
-                    "Setup complexity",
-                    "Safety concerns",
-                    "Guest communication management"
-                  ]}
-                />
+                <PersonaCard name="Jake" age={42} role="Property Manager" avatar="J" needs={["Reliable occupancy", "Automated workflows", "Revenue optimization tools"]} motivations={["Business scalability", "Passive income", "Professional growth"]} painPoints={["Damage claims", "Regulatory compliance", "Managing reviews and ratings"]} />
+                <PersonaCard name="Aisha" age={31} role="Occasional Host" avatar="A" needs={["Flexibility with calendar", "Clear instructions", "Helpful community"]} motivations={["Supplemental income", "Cultural exchange", "Property utilization"]} painPoints={["Setup complexity", "Safety concerns", "Guest communication management"]} />
               </div>
               
               <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
@@ -472,19 +377,19 @@ const Index = () => {
                 <div className="grid grid-cols-4 gap-2">
                   <div className="bg-white p-2 rounded shadow-sm">
                     <div className="text-md font-bold text-center text-blue-600">66%</div>
-                    <p className="text-[10px] text-center">Single property<br/>hosts</p>
+                    <p className="text-[10px] text-center">Single property<br />hosts</p>
                   </div>
                   <div className="bg-white p-2 rounded shadow-sm">
                     <div className="text-md font-bold text-center text-blue-600">23%</div>
-                    <p className="text-[10px] text-center">Multi-property<br/>hosts (2-4)</p>
+                    <p className="text-[10px] text-center">Multi-property<br />hosts (2-4)</p>
                   </div>
                   <div className="bg-white p-2 rounded shadow-sm">
                     <div className="text-md font-bold text-center text-blue-600">11%</div>
-                    <p className="text-[10px] text-center">Professional<br/>hosts (5+)</p>
+                    <p className="text-[10px] text-center">Professional<br />hosts (5+)</p>
                   </div>
                   <div className="bg-white p-2 rounded shadow-sm">
                     <div className="text-md font-bold text-center text-blue-600">$13.8K</div>
-                    <p className="text-[10px] text-center">Avg annual<br/>income</p>
+                    <p className="text-[10px] text-center">Avg annual<br />income</p>
                   </div>
                 </div>
               </div>
@@ -496,48 +401,15 @@ const Index = () => {
       {/* Trust & Safety Section */}
       <section id="trust" className="section-container bg-airbnb-light_gray">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="4. Trust, Safety & Community" 
-            subtitle="Elements that help Airbnb shift the narrative from 'rental app' to 'community you can trust'" 
-          />
+          <SectionTitle title="4. Trust, Safety & Community" subtitle="Elements that help Airbnb shift the narrative from 'rental app' to 'community you can trust'" />
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>}
-              title="Verified IDs"
-              description="Background checks help ensure safe interactions between users"
-              statistic="98% coverage"
-            />
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5"></path></svg>}
-              title="Guest & Host Reviews"
-              description="Bilateral accountability through detailed review system"
-              statistic="1B+ reviews"
-            />
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>}
-              title="Secure Payments"
-              description="Escrow-style payment system with cancellation protections"
-              statistic="$90B+ processed"
-            />
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>}
-              title="Host Guarantee"
-              description="Up to $3 million protection for property damages"
-              statistic="99.9% no claims"
-            />
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 6.1H3"></path><path d="M21 12.1H3"></path><path d="M15.1 18H3"></path></svg>}
-              title="Community Center"
-              description="Discussion forums and peer-to-peer support network"
-              statistic="2M+ active users"
-            />
-            <TrustFeature
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>}
-              title="Inclusivity Pledge"
-              description="Platform-wide culture of respect and belonging"
-              statistic="Est. 2016"
-            />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>} title="Verified IDs" description="Background checks help ensure safe interactions between users" statistic="98% coverage" />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5"></path></svg>} title="Guest & Host Reviews" description="Bilateral accountability through detailed review system" statistic="1B+ reviews" />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>} title="Secure Payments" description="Escrow-style payment system with cancellation protections" statistic="$90B+ processed" />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>} title="Host Guarantee" description="Up to $3 million protection for property damages" statistic="99.9% no claims" />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 6.1H3"></path><path d="M21 12.1H3"></path><path d="M15.1 18H3"></path></svg>} title="Community Center" description="Discussion forums and peer-to-peer support network" statistic="2M+ active users" />
+            <TrustFeature icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>} title="Inclusivity Pledge" description="Platform-wide culture of respect and belonging" statistic="Est. 2016" />
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -559,7 +431,9 @@ const Index = () => {
                 </div>
                 <p className="text-sm text-gray-600">High-quality photos, verified badges, and clear policies</p>
                 <div className="mt-3 h-1 bg-gray-200 rounded-full">
-                  <div className="h-full bg-airbnb rounded-full" style={{width: "94%"}}></div>
+                  <div className="h-full bg-airbnb rounded-full" style={{
+                  width: "94%"
+                }}></div>
                 </div>
               </div>
               <div className="bg-airbnb-light_gray p-4 rounded-lg border-l-4 border-airbnb">
@@ -569,7 +443,9 @@ const Index = () => {
                 </div>
                 <p className="text-sm text-gray-600">Secure messaging, quick response indicators, live support</p>
                 <div className="mt-3 h-1 bg-gray-200 rounded-full">
-                  <div className="h-full bg-airbnb rounded-full" style={{width: "87%"}}></div>
+                  <div className="h-full bg-airbnb rounded-full" style={{
+                  width: "87%"
+                }}></div>
                 </div>
               </div>
               <div className="bg-airbnb-light_gray p-4 rounded-lg border-l-4 border-airbnb">
@@ -579,7 +455,9 @@ const Index = () => {
                 </div>
                 <p className="text-sm text-gray-600">Damage deposits, guest verification, dispute resolution</p>
                 <div className="mt-3 h-1 bg-gray-200 rounded-full">
-                  <div className="h-full bg-airbnb rounded-full" style={{width: "91%"}}></div>
+                  <div className="h-full bg-airbnb rounded-full" style={{
+                  width: "91%"
+                }}></div>
                 </div>
               </div>
             </div>
@@ -589,15 +467,15 @@ const Index = () => {
               <div className="grid grid-cols-3 text-center gap-8">
                 <div>
                   <div className="text-3xl font-bold text-airbnb">91%</div>
-                  <p className="text-xs text-gray-600">Guest-to-Host<br/>Trust Rating</p>
+                  <p className="text-xs text-gray-600">Guest-to-Host<br />Trust Rating</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-airbnb">94%</div>
-                  <p className="text-xs text-gray-600">Platform<br/>Security Score</p>
+                  <p className="text-xs text-gray-600">Platform<br />Security Score</p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-airbnb">-73%</div>
-                  <p className="text-xs text-gray-600">Decline in<br/>Safety Incidents</p>
+                  <p className="text-xs text-gray-600">Decline in<br />Safety Incidents</p>
                 </div>
               </div>
             </div>
@@ -608,69 +486,36 @@ const Index = () => {
       {/* User Journey Section */}
       <section id="journey" className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="5. User Journey Mapping" 
-            subtitle="Following the path of both guests and hosts through the Airbnb experience" 
-            accentColor="green"
-          />
+          <SectionTitle title="5. User Journey Mapping" subtitle="Following the path of both guests and hosts through the Airbnb experience" accentColor="green" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Wireframe title="Guest Journey" tagStyle="destination">
               <div className="py-2">
-                <UserJourneyStep 
-                  step={1} 
-                  title="Discover" 
-                  description="Search, browse categories, or explore based on mood and inspiration" 
-                />
+                <UserJourneyStep step={1} title="Discover" description="Search, browse categories, or explore based on mood and inspiration" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-green-100 text-green-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">89%</span> of users start with location search
                 </div>
                 
-                <UserJourneyStep 
-                  step={2} 
-                  title="Filter & Select" 
-                  description="Use filters like pet-friendly, beachfront, or price range to narrow options" 
-                />
+                <UserJourneyStep step={2} title="Filter & Select" description="Use filters like pet-friendly, beachfront, or price range to narrow options" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-blue-100 text-blue-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">4.2</span> filters used per search on average
                 </div>
                 
-                <UserJourneyStep 
-                  step={3} 
-                  title="Deep-dive into Listing" 
-                  description="Review photos, amenities, house rules, cancellation policy, and host profile" 
-                />
+                <UserJourneyStep step={3} title="Deep-dive into Listing" description="Review photos, amenities, house rules, cancellation policy, and host profile" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-purple-100 text-purple-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">78%</span> of users read reviews before booking
                 </div>
                 
-                <UserJourneyStep 
-                  step={4} 
-                  title="Book" 
-                  description="Use Instant Book or send inquiry to host with questions" 
-                />
+                <UserJourneyStep step={4} title="Book" description="Use Instant Book or send inquiry to host with questions" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-orange-100 text-orange-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">68%</span> of bookings use Instant Book feature
                 </div>
                 
-                <UserJourneyStep 
-                  step={5} 
-                  title="Pre-arrival" 
-                  description="Message with host, receive check-in details, and sync calendar" 
-                />
+                <UserJourneyStep step={5} title="Pre-arrival" description="Message with host, receive check-in details, and sync calendar" />
                 
-                <UserJourneyStep 
-                  step={6} 
-                  title="Stay Experience" 
-                  description="Access property, enjoy amenities, potentially message host with issues" 
-                />
+                <UserJourneyStep step={6} title="Stay Experience" description="Access property, enjoy amenities, potentially message host with issues" />
                 
-                <UserJourneyStep 
-                  step={7} 
-                  title="Post-stay" 
-                  description="Leave review, receive follow-ups, save to wishlist for future stays" 
-                  isLast={true}
-                />
+                <UserJourneyStep step={7} title="Post-stay" description="Leave review, receive follow-ups, save to wishlist for future stays" isLast={true} />
                 <div className="ml-12 -mt-2 text-xs bg-airbnb bg-opacity-10 text-airbnb rounded px-2 py-1 inline-block">
                   <span className="font-bold">72%</span> of guests leave reviews
                 </div>
@@ -679,60 +524,31 @@ const Index = () => {
 
             <Wireframe title="Host Journey" tagStyle="booking">
               <div className="py-2">
-                <UserJourneyStep 
-                  step={1} 
-                  title="Create Listing" 
-                  description="Add photos, description with AI suggestions, set house rules" 
-                />
+                <UserJourneyStep step={1} title="Create Listing" description="Add photos, description with AI suggestions, set house rules" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-airbnb bg-opacity-10 text-airbnb rounded px-2 py-1 inline-block">
                   <span className="font-bold">12</span> photos uploaded on average per listing
                 </div>
                 
-                <UserJourneyStep 
-                  step={2} 
-                  title="Configure Settings" 
-                  description="Set availability calendar, pricing strategy, and cancellation policy" 
-                />
+                <UserJourneyStep step={2} title="Configure Settings" description="Set availability calendar, pricing strategy, and cancellation policy" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-blue-100 text-blue-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">57%</span> use Smart Pricing algorithm
                 </div>
                 
-                <UserJourneyStep 
-                  step={3} 
-                  title="Manage Inquiries" 
-                  description="Respond to booking requests and guest questions" 
-                />
+                <UserJourneyStep step={3} title="Manage Inquiries" description="Respond to booking requests and guest questions" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-green-100 text-green-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">91%</span> response rate for Superhosts
                 </div>
                 
-                <UserJourneyStep 
-                  step={4} 
-                  title="Pre-arrival Prep" 
-                  description="Clean property, prepare check-in information, send welcome message" 
-                />
+                <UserJourneyStep step={4} title="Pre-arrival Prep" description="Clean property, prepare check-in information, send welcome message" />
                 
-                <UserJourneyStep 
-                  step={5} 
-                  title="Host the Stay" 
-                  description="Provide support as needed, manage issues if they arise" 
-                />
+                <UserJourneyStep step={5} title="Host the Stay" description="Provide support as needed, manage issues if they arise" />
                 <div className="ml-12 mb-4 -mt-2 text-xs bg-orange-100 text-orange-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">~3%</span> of stays require host intervention
                 </div>
                 
-                <UserJourneyStep 
-                  step={6} 
-                  title="Post-stay" 
-                  description="Review guest, prepare for next booking, receive payment" 
-                />
+                <UserJourneyStep step={6} title="Post-stay" description="Review guest, prepare for next booking, receive payment" />
                 
-                <UserJourneyStep 
-                  step={7} 
-                  title="Analytics & Optimization" 
-                  description="Review performance, adjust pricing, improve listing based on feedback" 
-                  isLast={true}
-                />
+                <UserJourneyStep step={7} title="Analytics & Optimization" description="Review performance, adjust pricing, improve listing based on feedback" isLast={true} />
                 <div className="ml-12 -mt-2 text-xs bg-purple-100 text-purple-800 rounded px-2 py-1 inline-block">
                   <span className="font-bold">46%</span> of hosts make at least one update after reviews
                 </div>
@@ -745,46 +561,12 @@ const Index = () => {
       {/* Feature Prioritization Section */}
       <section className="section-container bg-airbnb-light_gray">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="6. Feature Prioritization" 
-            subtitle="Using the Kano Model to understand feature importance" 
-            accentColor="blue"
-          />
+          <SectionTitle title="6. Feature Prioritization" subtitle="Using the Kano Model to understand feature importance" accentColor="blue" />
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <FeatureCategory
-              title="Must-Have Features"
-              features={[
-                "Secure payments",
-                "Search, filters, reviews",
-                "Calendar and availability management",
-                "Messaging system",
-                "Photo uploads and management"
-              ]}
-              color="text-airbnb"
-            />
-            <FeatureCategory
-              title="Performance Features"
-              features={[
-                "Dynamic pricing",
-                "Personalized home page & recommendations",
-                "Communication automation",
-                "Virtual tours",
-                "Mobile app functionality"
-              ]}
-              color="text-blue-500"
-            />
-            <FeatureCategory
-              title="Delighter Features"
-              features={[
-                "Airbnb Experiences & Adventures",
-                "Group planning tools",
-                "Sustainability filters and eco-badges",
-                "Wishlist reminders with price drops",
-                "Local guidebooks and insider tips"
-              ]}
-              color="text-green-500"
-            />
+            <FeatureCategory title="Must-Have Features" features={["Secure payments", "Search, filters, reviews", "Calendar and availability management", "Messaging system", "Photo uploads and management"]} color="text-airbnb" />
+            <FeatureCategory title="Performance Features" features={["Dynamic pricing", "Personalized home page & recommendations", "Communication automation", "Virtual tours", "Mobile app functionality"]} color="text-blue-500" />
+            <FeatureCategory title="Delighter Features" features={["Airbnb Experiences & Adventures", "Group planning tools", "Sustainability filters and eco-badges", "Wishlist reminders with price drops", "Local guidebooks and insider tips"]} color="text-green-500" />
           </div>
 
           <Wireframe className="max-w-4xl mx-auto">
@@ -867,11 +649,7 @@ const Index = () => {
       {/* Personalization Section */}
       <section className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="7. Personalization & Retention Tactics" 
-            subtitle="How Airbnb creates tailored experiences to keep users coming back" 
-            accentColor="purple"
-          />
+          <SectionTitle title="7. Personalization & Retention Tactics" subtitle="How Airbnb creates tailored experiences to keep users coming back" accentColor="purple" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Wireframe tagStyle="flight">
@@ -900,10 +678,10 @@ const Index = () => {
                     </div>
                     
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 1<br/>+42% clicks</div>
-                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 2<br/>+38% clicks</div>
-                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 3<br/>+27% clicks</div>
-                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 4<br/>+24% clicks</div>
+                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 1<br />+42% clicks</div>
+                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 2<br />+38% clicks</div>
+                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 3<br />+27% clicks</div>
+                      <div className="aspect-square bg-white rounded p-1 text-[8px] text-center flex items-center justify-center">Property Image 4<br />+24% clicks</div>
                     </div>
                     
                     <div className="card-highlight bg-airbnb bg-opacity-10 p-3 rounded-lg border border-airbnb border-opacity-30">
@@ -914,14 +692,7 @@ const Index = () => {
                     </div>
                     
                     <div className="flex gap-2 overflow-x-auto pb-2">
-                      <ListingCard
-                        image="📷"
-                        title="Beach Villa"
-                        location="Costa Brava, Spain"
-                        price="$120"
-                        rating={4.9}
-                        reviewCount={128}
-                      />
+                      <ListingCard image="📷" title="Beach Villa" location="Costa Brava, Spain" price="$120" rating={4.9} reviewCount={128} />
                     </div>
                   </div>
                 </div>
@@ -937,7 +708,9 @@ const Index = () => {
                   <div className="flex-1">
                     <p className="text-sm">Recommends listings based on past behavior</p>
                     <div className="h-1 w-full bg-gray-100 rounded-full mt-1">
-                      <div className="h-full bg-airbnb rounded-full" style={{width: "84%"}}></div>
+                      <div className="h-full bg-airbnb rounded-full" style={{
+                      width: "84%"
+                    }}></div>
                     </div>
                   </div>
                   <span className="text-xs font-bold">+84%</span>
@@ -947,7 +720,9 @@ const Index = () => {
                   <div className="flex-1">
                     <p className="text-sm">Surfaces similar destinations to previous searches</p>
                     <div className="h-1 w-full bg-gray-100 rounded-full mt-1">
-                      <div className="h-full bg-airbnb rounded-full" style={{width: "72%"}}></div>
+                      <div className="h-full bg-airbnb rounded-full" style={{
+                      width: "72%"
+                    }}></div>
                     </div>
                   </div>
                   <span className="text-xs font-bold">+72%</span>
@@ -957,7 +732,9 @@ const Index = () => {
                   <div className="flex-1">
                     <p className="text-sm">Learns preferences for amenities and property types</p>
                     <div className="h-1 w-full bg-gray-100 rounded-full mt-1">
-                      <div className="h-full bg-airbnb rounded-full" style={{width: "91%"}}></div>
+                      <div className="h-full bg-airbnb rounded-full" style={{
+                      width: "91%"
+                    }}></div>
                     </div>
                   </div>
                   <span className="text-xs font-bold">+91%</span>
@@ -968,15 +745,15 @@ const Index = () => {
                 <div className="grid grid-cols-3 gap-2">
                   <div className="bg-green-50 p-2 rounded-lg text-center">
                     <div className="text-green-600 font-bold">36%</div>
-                    <p className="text-[10px]">Booking Rate<br/>Improvement</p>
+                    <p className="text-[10px]">Booking Rate<br />Improvement</p>
                   </div>
                   <div className="bg-blue-50 p-2 rounded-lg text-center">
                     <div className="text-blue-600 font-bold">128%</div>
-                    <p className="text-[10px]">Search-to-Book<br/>Conversion</p>
+                    <p className="text-[10px]">Search-to-Book<br />Conversion</p>
                   </div>
                   <div className="bg-purple-50 p-2 rounded-lg text-center">
                     <div className="text-purple-600 font-bold">4.3x</div>
-                    <p className="text-[10px]">Return Visit<br/>Frequency</p>
+                    <p className="text-[10px]">Return Visit<br />Frequency</p>
                   </div>
                 </div>
               </div>
@@ -1080,7 +857,9 @@ const Index = () => {
                       <span className="font-bold">76%</span>
                     </div>
                     <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-green-500" style={{width: "76%"}}></div>
+                      <div className="h-full bg-green-500" style={{
+                      width: "76%"
+                    }}></div>
                     </div>
                   </div>
                   <div>
@@ -1089,7 +868,9 @@ const Index = () => {
                       <span className="font-bold">58%</span>
                     </div>
                     <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-blue-500" style={{width: "58%"}}></div>
+                      <div className="h-full bg-blue-500" style={{
+                      width: "58%"
+                    }}></div>
                     </div>
                   </div>
                   <div>
@@ -1098,7 +879,9 @@ const Index = () => {
                       <span className="font-bold">42%</span>
                     </div>
                     <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-purple-500" style={{width: "42%"}}></div>
+                      <div className="h-full bg-purple-500" style={{
+                      width: "42%"
+                    }}></div>
                     </div>
                   </div>
                 </div>
@@ -1111,11 +894,7 @@ const Index = () => {
       {/* Technology & UX Section */}
       <section className="section-container bg-airbnb-light_gray">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="8. Technology & UX" 
-            subtitle="Exploring the technical and design foundations of Airbnb's platform" 
-            accentColor="orange"
-          />
+          <SectionTitle title="8. Technology & UX" subtitle="Exploring the technical and design foundations of Airbnb's platform" accentColor="orange" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-6">
@@ -1127,15 +906,15 @@ const Index = () => {
                 <div className="grid grid-cols-3 gap-2 mb-4">
                   <div className="bg-white p-2 rounded shadow-sm text-center">
                     <div className="text-lg font-bold text-green-600">1.2s</div>
-                    <p className="text-[10px]">Average<br/>load time</p>
+                    <p className="text-[10px]">Average<br />load time</p>
                   </div>
                   <div className="bg-white p-2 rounded shadow-sm text-center">
                     <div className="text-lg font-bold text-blue-600">98/100</div>
-                    <p className="text-[10px]">Google<br/>mobile score</p>
+                    <p className="text-[10px]">Google<br />mobile score</p>
                   </div>
                   <div className="bg-white p-2 rounded shadow-sm text-center">
                     <div className="text-lg font-bold text-purple-600">+58%</div>
-                    <p className="text-[10px]">YoY mobile<br/>conversion</p>
+                    <p className="text-[10px]">YoY mobile<br />conversion</p>
                   </div>
                 </div>
                 
@@ -1161,25 +940,25 @@ const Index = () => {
                         <div className="flex gap-2 overflow-x-auto pb-2">
                           <div className="flex-shrink-0 flex flex-col items-center">
                             <div className="h-12 w-12 bg-gray-200 rounded-lg mb-1 flex items-center justify-center text-[6px]">
-                              <span>+82%<br/>CTR</span>
+                              <span>+82%<br />CTR</span>
                             </div>
                             <span className="text-[10px]">Beach</span>
                           </div>
                           <div className="flex-shrink-0 flex flex-col items-center">
                             <div className="h-12 w-12 bg-gray-200 rounded-lg mb-1 flex items-center justify-center text-[6px]">
-                              <span>+73%<br/>CTR</span>
+                              <span>+73%<br />CTR</span>
                             </div>
                             <span className="text-[10px]">Cabin</span>
                           </div>
                           <div className="flex-shrink-0 flex flex-col items-center">
                             <div className="h-12 w-12 bg-gray-200 rounded-lg mb-1 flex items-center justify-center text-[6px]">
-                              <span>+69%<br/>CTR</span>
+                              <span>+69%<br />CTR</span>
                             </div>
                             <span className="text-[10px]">Design</span>
                           </div>
                           <div className="flex-shrink-0 flex flex-col items-center">
                             <div className="h-12 w-12 bg-gray-200 rounded-lg mb-1 flex items-center justify-center text-[6px]">
-                              <span>+65%<br/>CTR</span>
+                              <span>+65%<br />CTR</span>
                             </div>
                             <span className="text-[10px]">Pool</span>
                           </div>
@@ -1505,54 +1284,14 @@ const Index = () => {
       {/* Metrics Section */}
       <section className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="9. Metrics That Matter" 
-            subtitle="Key performance indicators that drive Airbnb's business decisions" 
-            accentColor="blue"
-          />
+          <SectionTitle title="9. Metrics That Matter" subtitle="Key performance indicators that drive Airbnb's business decisions" accentColor="blue" />
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <MetricCard
-              title="Guest Metrics"
-              metrics={[
-                "Conversion Rate from search to booking",
-                "NPS and star rating distribution",
-                "Average Booking Value and Length of Stay",
-                "Wishlist interaction to booking ratio"
-              ]}
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
-              statistic="150M+ users"
-              growthPercentage={28}
-              colorScheme="airbnb"
-            />
+            <MetricCard title="Guest Metrics" metrics={["Conversion Rate from search to booking", "NPS and star rating distribution", "Average Booking Value and Length of Stay", "Wishlist interaction to booking ratio"]} icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>} statistic="150M+ users" growthPercentage={28} colorScheme="airbnb" />
             
-            <MetricCard
-              title="Host Metrics"
-              metrics={[
-                "Average Occupancy Rate (68%)",
-                "Cancellation Rate (3.2%)",
-                "Time to Respond to Inquiries (2.4 hours avg)",
-                "Host Retention & Superhost conversion (14% of hosts)"
-              ]}
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>}
-              statistic="4M+ hosts"
-              growthPercentage={19}
-              colorScheme="blue"
-            />
+            <MetricCard title="Host Metrics" metrics={["Average Occupancy Rate (68%)", "Cancellation Rate (3.2%)", "Time to Respond to Inquiries (2.4 hours avg)", "Host Retention & Superhost conversion (14% of hosts)"]} icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>} statistic="4M+ hosts" growthPercentage={19} colorScheme="blue" />
             
-            <MetricCard
-              title="Platform Metrics"
-              metrics={[
-                "Experience Attach Rate (32% bundled bookings)",
-                "Referral Conversions (42% from referrals)",
-                "Listing-to-Booking Time (2.7 days average)",
-                "Expansion in Tier 2/3 cities (+63% YoY growth)"
-              ]}
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>}
-              statistic="$113B+ GMV"
-              growthPercentage={35}
-              colorScheme="purple"
-            />
+            <MetricCard title="Platform Metrics" metrics={["Experience Attach Rate (32% bundled bookings)", "Referral Conversions (42% from referrals)", "Listing-to-Booking Time (2.7 days average)", "Expansion in Tier 2/3 cities (+63% YoY growth)"]} icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>} statistic="$113B+ GMV" growthPercentage={35} colorScheme="purple" />
           </div>
           
           <Wireframe className="max-w-4xl mx-auto" tagStyle="booking">
@@ -1613,19 +1352,19 @@ const Index = () => {
                   <div className="grid grid-cols-4 gap-2">
                     <div className="p-1.5 bg-blue-50 rounded text-center">
                       <div className="text-[11px] font-bold text-blue-600">42%</div>
-                      <p className="text-[8px]">Organic<br/>Search</p>
+                      <p className="text-[8px]">Organic<br />Search</p>
                     </div>
                     <div className="p-1.5 bg-green-50 rounded text-center">
                       <div className="text-[11px] font-bold text-green-600">28%</div>
-                      <p className="text-[8px]">Direct<br/>Traffic</p>
+                      <p className="text-[8px]">Direct<br />Traffic</p>
                     </div>
                     <div className="p-1.5 bg-purple-50 rounded text-center">
                       <div className="text-[11px] font-bold text-purple-600">18%</div>
-                      <p className="text-[8px]">Paid<br/>Search</p>
+                      <p className="text-[8px]">Paid<br />Search</p>
                     </div>
                     <div className="p-1.5 bg-orange-50 rounded text-center">
                       <div className="text-[11px] font-bold text-orange-600">12%</div>
-                      <p className="text-[8px]">Social<br/>Media</p>
+                      <p className="text-[8px]">Social<br />Media</p>
                     </div>
                   </div>
                 </div>
@@ -1720,11 +1459,7 @@ const Index = () => {
       {/* Challenges & Opportunities Section */}
       <section className="section-container bg-airbnb-light_gray">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="10. Challenges & Future Opportunities" 
-            subtitle="Navigating obstacles and exploring new horizons for growth" 
-            accentColor="purple"
-          />
+          <SectionTitle title="10. Challenges & Future Opportunities" subtitle="Navigating obstacles and exploring new horizons for growth" accentColor="purple" />
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Wireframe title="Key Challenges" tagStyle="destination">
@@ -1963,11 +1698,7 @@ const Index = () => {
       {/* Conclusion Section */}
       <section id="conclusion" className="section-container">
         <div className="animate-on-scroll">
-          <SectionTitle 
-            title="Conclusion" 
-            subtitle="Understanding the lessons from Airbnb's product journey" 
-            accentColor="airbnb"
-          />
+          <SectionTitle title="Conclusion" subtitle="Understanding the lessons from Airbnb's product journey" accentColor="airbnb" />
 
           <Card className="max-w-4xl mx-auto relative overflow-hidden">
             <div className="absolute -right-8 -top-8 w-24 h-24 bg-airbnb opacity-10 rounded-full"></div>
@@ -2081,8 +1812,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
