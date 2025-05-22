@@ -18,7 +18,7 @@ const SectionTitle = ({ title, subtitle, id, className, accentColor = "airbnb" }
         {title}
         <div className={`absolute -bottom-1 left-0 h-1 w-3/4 bg-${accentColor} opacity-30`}></div>
       </h2>
-      {subtitle && <p className="section-subtitle text-lg text-gray-600 max-w-3xl">{subtitle}</p>}
+      {subtitle && <p className="section-subtitle text-lg text-gray-600 max-w-3xl text-left">{subtitle}</p>}
     </div>
   );
 };
