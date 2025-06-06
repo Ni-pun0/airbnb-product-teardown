@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -340,13 +341,19 @@ const Index = () => {
             <FeatureCategory title="Delighter Features" features={["Airbnb Experiences & Adventures", "Group planning tools", "Sustainability filters and eco-badges", "Wishlist reminders with price drops", "Local guidebooks and insider tips"]} color="text-green-500" />
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <img 
-              src="/lovable-uploads/2d31874d-c8b4-4db5-b6f0-d725b3150c2f.png" 
-              alt="Feature Impact Map showing various features plotted on a chart with User Satisfaction vs Implementation Effort axes"
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
+          <Wireframe className="max-w-4xl mx-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold">Feature Impact Map</h3>
+              <div className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Based on 2023 user research</div>
+            </div>
+            <div className="w-full">
+              <img 
+                src="/lovable-uploads/8947f0d0-869a-412c-91b0-17e17f0d45ed.png" 
+                alt="Feature Impact Map showing various features plotted on a chart with User Satisfaction vs Implementation Effort axes"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </Wireframe>
         </div>
       </section>
 
