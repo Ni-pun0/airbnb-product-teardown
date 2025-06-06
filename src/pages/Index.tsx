@@ -25,21 +25,21 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <PersonaCard 
-              title="Sarah, 28 - Digital Nomad"
+              name="Sarah, 28 - Digital Nomad"
               description="Seeks unique, work-friendly accommodations with reliable WiFi and inspiring environments"
               goals={["Find long-term stays", "Work-life balance", "Cultural immersion"]}
               painPoints={["Inconsistent WiFi", "Hidden fees", "Lack of workspace"]}
               avatar="/lovable-uploads/fa6f9d34-0176-410d-879a-137a69167faf.png"
             />
             <PersonaCard 
-              title="Mike & Emma - Weekend Travelers"
+              name="Mike & Emma - Weekend Travelers"
               description="Couple looking for romantic getaways and memorable experiences close to home"
               goals={["Quality time together", "Discover new places", "Value for money"]}
               painPoints={["Limited availability", "Unclear photos", "Location accuracy"]}
               avatar="/lovable-uploads/e936742a-5b0a-492e-b4ca-6ec2f930b51b.png"
             />
             <PersonaCard 
-              title="Robert, 45 - Host & Property Manager"
+              name="Robert, 45 - Host & Property Manager"
               description="Manages multiple properties and seeks to maximize occupancy while maintaining quality"
               goals={["Maximize revenue", "Automate processes", "Maintain ratings"]}
               painPoints={["Guest communication", "Dynamic pricing", "Calendar management"]}
@@ -56,35 +56,35 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row gap-6 items-center">
             <UserJourneyStep 
-              step="1"
+              step={1}
               phase="Discovery" 
               actions={["Search destinations", "Browse listings", "Read reviews"]}
               emotions={["Excitement", "Curiosity", "Overwhelm"]}
               touchpoints={["Google Search", "Social Media", "Airbnb Homepage"]}
             />
             <UserJourneyStep 
-              step="2"
+              step={2}
               phase="Evaluation" 
               actions={["Compare options", "Check availability", "Calculate costs"]}
               emotions={["Careful", "Analytical", "Concerned"]}
               touchpoints={["Listing pages", "Reviews", "Photos"]}
             />
             <UserJourneyStep 
-              step="3"
+              step={3}
               phase="Booking" 
               actions={["Contact host", "Submit request", "Make payment"]}
               emotions={["Hopeful", "Anxious", "Committed"]}
               touchpoints={["Messaging", "Booking form", "Payment system"]}
             />
             <UserJourneyStep 
-              step="4"
+              step={4}
               phase="Experience" 
               actions={["Check-in", "Stay", "Explore area"]}
               emotions={["Satisfied", "Relaxed", "Adventurous"]}
               touchpoints={["Property", "Host", "Local area"]}
             />
             <UserJourneyStep 
-              step="5"
+              step={5}
               phase="Post-Stay" 
               actions={["Leave review", "Share photos", "Plan next trip"]}
               emotions={["Nostalgic", "Grateful", "Inspired"]}
@@ -123,10 +123,10 @@ const Index = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Key Metrics Analysis</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  <MetricCard title="Search Conversion" value="3.2%" trend="up" />
-                  <MetricCard title="Booking Rate" value="12.8%" trend="down" />
-                  <MetricCard title="User Retention" value="67%" trend="up" />
-                  <MetricCard title="Host Satisfaction" value="4.2/5" trend="stable" />
+                  <MetricCard title="Search Conversion" metric="3.2%" trend="up" />
+                  <MetricCard title="Booking Rate" metric="12.8%" trend="down" />
+                  <MetricCard title="User Retention" metric="67%" trend="up" />
+                  <MetricCard title="Host Satisfaction" metric="4.2/5" trend="stable" />
                 </div>
               </div>
               
@@ -371,18 +371,18 @@ const Index = () => {
             <Wireframe title="High-Fidelity Prototype" tagStyle="booking">
               <div className="space-y-4">
                 <ListingCard 
+                  image="/placeholder.svg"
                   title="Cozy Downtown Loft"
                   location="San Francisco, CA"
-                  price="$89"
-                  rating="4.8"
-                  image="/placeholder.svg"
+                  price={89}
+                  rating={4.8}
                 />
                 <ListingCard 
+                  image="/placeholder.svg"
                   title="Beachfront Villa"
                   location="Malibu, CA"
-                  price="$245"
-                  rating="4.9"
-                  image="/placeholder.svg"
+                  price={245}
+                  rating={4.9}
                 />
               </div>
             </Wireframe>
@@ -517,10 +517,10 @@ const Index = () => {
           <SectionTitle title="9. Success Metrics & KPIs" subtitle="Measuring the impact of our design improvements" accentColor="red" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <MetricCard title="Conversion Rate" value="4.8%" trend="up" description="Search to booking conversion" />
-            <MetricCard title="User Satisfaction" value="4.7/5" trend="up" description="Post-stay survey ratings" />
-            <MetricCard title="Time to Book" value="3.2 min" trend="down" description="Average booking completion time" />
-            <MetricCard title="Host Revenue" value="+18%" trend="up" description="Average monthly revenue increase" />
+            <MetricCard title="Conversion Rate" metric="4.8%" trend="up" description="Search to booking conversion" />
+            <MetricCard title="User Satisfaction" metric="4.7/5" trend="up" description="Post-stay survey ratings" />
+            <MetricCard title="Time to Book" metric="3.2 min" trend="down" description="Average booking completion time" />
+            <MetricCard title="Host Revenue" metric="+18%" trend="up" description="Average monthly revenue increase" />
           </div>
           
           <Wireframe title="Success Metrics Dashboard" className="max-w-6xl mx-auto">
