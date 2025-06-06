@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -11,7 +10,7 @@ import MetricCard from '@/components/MetricCard';
 import TrustFeature from '@/components/TrustFeature';
 import FeatureCategory from '@/components/FeatureCategory';
 import Footer from '@/components/Footer';
-import { Star, TrendingUp, Users, DollarSign, Search, Filter, MapPin, Calendar, Heart, MessageCircle } from 'lucide-react';
+import { Star, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -357,137 +356,51 @@ const Index = () => {
           <SectionTitle title="7. Prototyping & Testing" subtitle="Iterative design and validation through user testing" accentColor="yellow" />
           
           <div className="grid lg:grid-cols-2 gap-12">
-            <Wireframe title="Enhanced Search Interface" tagStyle="destination">
-              <div className="space-y-3">
-                {/* Header */}
-                <div className="flex items-center justify-between p-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded border">
-                  <div className="flex items-center gap-2">
-                    <Search className="w-4 h-4 text-gray-500" />
-                    <span className="text-sm font-medium">Search Bar</span>
-                  </div>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  </div>
-                </div>
-
-                {/* Search Components */}
+            <Wireframe title="Low-Fidelity Wireframes" tagStyle="destination">
+              <div className="space-y-4">
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="bg-blue-50 border border-blue-200 p-2 rounded flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-blue-500" />
-                    <span className="text-xs">Location</span>
+                  <div className="bg-gray-100 h-20 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                    Header
                   </div>
-                  <div className="bg-green-50 border border-green-200 p-2 rounded flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-green-500" />
-                    <span className="text-xs">Check-in</span>
+                  <div className="bg-gray-100 h-20 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                    Search
                   </div>
-                  <div className="bg-purple-50 border border-purple-200 p-2 rounded flex items-center gap-1">
-                    <Users className="w-3 h-3 text-purple-500" />
-                    <span className="text-xs">Guests</span>
+                  <div className="bg-gray-100 h-20 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                    Filters
                   </div>
                 </div>
-
-                {/* Filters */}
-                <div className="bg-gray-50 border border-gray-200 p-3 rounded">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Filter className="w-3 h-3 text-gray-500" />
-                    <span className="text-xs font-medium">Smart Filters</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="bg-white border px-2 py-1 rounded text-xs">WiFi Speed</div>
-                    <div className="bg-white border px-2 py-1 rounded text-xs">Pet Friendly</div>
-                    <div className="bg-white border px-2 py-1 rounded text-xs">Workspace</div>
-                    <div className="bg-white border px-2 py-1 rounded text-xs">Pool</div>
-                  </div>
+                <div className="bg-gray-50 h-32 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                  Results Grid Layout
                 </div>
-
-                {/* Results Preview */}
-                <div className="space-y-2">
-                  <div className="text-xs font-medium text-gray-600 mb-1">Search Results (347 properties)</div>
-                  {[1,2,3].map(i => (
-                    <div key={i} className="bg-white border rounded p-2 flex items-center gap-2">
-                      <div className="w-12 h-8 bg-gray-200 rounded"></div>
-                      <div className="flex-1">
-                        <div className="text-xs font-medium">Property {i}</div>
-                        <div className="text-xs text-gray-500">$89/night</div>
-                      </div>
-                      <Heart className="w-3 h-3 text-gray-400" />
-                    </div>
-                  ))}
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-gray-100 h-16 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                    Pagination
+                  </div>
+                  <div className="bg-gray-100 h-16 rounded border-2 border-dashed border-gray-300 flex items-center justify-center text-xs">
+                    Sort Options
+                  </div>
                 </div>
               </div>
             </Wireframe>
             
-            <Wireframe title="Booking Flow Prototype" tagStyle="booking">
-              <div className="space-y-3">
-                {/* Property Header */}
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 p-3 rounded">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium">Cozy Downtown Loft</span>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-3 h-3 text-yellow-500 fill-current" />
-                      <span className="text-xs">4.8</span>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-600">San Francisco, CA • $89/night</div>
-                </div>
-
-                {/* Booking Details */}
-                <div className="space-y-2">
-                  <div className="bg-white border p-2 rounded">
-                    <div className="text-xs font-medium mb-1">Check-in/out</div>
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="bg-gray-50 p-1 rounded text-xs">Mar 15</div>
-                      <div className="bg-gray-50 p-1 rounded text-xs">Mar 18</div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white border p-2 rounded">
-                    <div className="text-xs font-medium mb-1">Guests</div>
-                    <div className="bg-gray-50 p-1 rounded text-xs">2 adults, 1 child</div>
-                  </div>
-                </div>
-
-                {/* Pricing Breakdown */}
-                <div className="bg-blue-50 border border-blue-200 p-2 rounded">
-                  <div className="text-xs font-medium mb-2">Price Breakdown</div>
-                  <div className="space-y-1 text-xs">
-                    <div className="flex justify-between">
-                      <span>$89 x 3 nights</span>
-                      <span>$267</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Cleaning fee</span>
-                      <span>$25</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Service fee</span>
-                      <span>$18</span>
-                    </div>
-                    <div className="border-t pt-1 flex justify-between font-medium">
-                      <span>Total</span>
-                      <span>$310</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="space-y-2">
-                  <button className="w-full bg-airbnb text-white py-2 rounded text-sm font-medium">
-                    Reserve
-                  </button>
-                  <div className="flex gap-2">
-                    <button className="flex-1 bg-gray-100 py-1 rounded text-xs flex items-center justify-center gap-1">
-                      <MessageCircle className="w-3 h-3" />
-                      Message Host
-                    </button>
-                    <button className="flex-1 bg-gray-100 py-1 rounded text-xs flex items-center justify-center gap-1">
-                      <Heart className="w-3 h-3" />
-                      Save
-                    </button>
-                  </div>
-                </div>
+            <Wireframe title="High-Fidelity Prototype" tagStyle="booking">
+              <div className="space-y-4">
+                <ListingCard 
+                  image="/placeholder.svg"
+                  title="Cozy Downtown Loft"
+                  location="San Francisco, CA"
+                  price="$89"
+                  rating={4.8}
+                  reviewCount={124}
+                />
+                <ListingCard 
+                  image="/placeholder.svg"
+                  title="Beachfront Villa"
+                  location="Malibu, CA"
+                  price="$245"
+                  rating={4.9}
+                  reviewCount={89}
+                />
               </div>
             </Wireframe>
           </div>
