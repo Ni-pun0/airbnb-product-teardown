@@ -11,6 +11,7 @@ import MetricCard from '@/components/MetricCard';
 import TrustFeature from '@/components/TrustFeature';
 import FeatureCategory from '@/components/FeatureCategory';
 import Footer from '@/components/Footer';
+import { Star, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -25,25 +26,31 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <PersonaCard 
-              name="Sarah, 28 - Digital Nomad"
-              description="Seeks unique, work-friendly accommodations with reliable WiFi and inspiring environments"
-              goals={["Find long-term stays", "Work-life balance", "Cultural immersion"]}
-              painPoints={["Inconsistent WiFi", "Hidden fees", "Lack of workspace"]}
+              name="Sarah"
+              age={28}
+              role="Digital Nomad"
               avatar="/lovable-uploads/fa6f9d34-0176-410d-879a-137a69167faf.png"
+              needs={["Find long-term stays", "Work-life balance", "Cultural immersion"]}
+              motivations={["Remote work flexibility", "Travel experiences", "Personal growth"]}
+              painPoints={["Inconsistent WiFi", "Hidden fees", "Lack of workspace"]}
             />
             <PersonaCard 
-              name="Mike & Emma - Weekend Travelers"
-              description="Couple looking for romantic getaways and memorable experiences close to home"
-              goals={["Quality time together", "Discover new places", "Value for money"]}
-              painPoints={["Limited availability", "Unclear photos", "Location accuracy"]}
+              name="Mike & Emma"
+              age={32}
+              role="Weekend Travelers"
               avatar="/lovable-uploads/e936742a-5b0a-492e-b4ca-6ec2f930b51b.png"
+              needs={["Quality time together", "Discover new places", "Value for money"]}
+              motivations={["Romantic getaways", "Memorable experiences", "Work-life balance"]}
+              painPoints={["Limited availability", "Unclear photos", "Location accuracy"]}
             />
             <PersonaCard 
-              name="Robert, 45 - Host & Property Manager"
-              description="Manages multiple properties and seeks to maximize occupancy while maintaining quality"
-              goals={["Maximize revenue", "Automate processes", "Maintain ratings"]}
-              painPoints={["Guest communication", "Dynamic pricing", "Calendar management"]}
+              name="Robert"
+              age={45}
+              role="Host & Property Manager"
               avatar="/lovable-uploads/058fdaad-47e7-4b8f-bc5a-1b199c276ebc.png"
+              needs={["Maximize revenue", "Automate processes", "Maintain ratings"]}
+              motivations={["Financial independence", "Property investment", "Customer satisfaction"]}
+              painPoints={["Guest communication", "Dynamic pricing", "Calendar management"]}
             />
           </div>
         </div>
@@ -57,38 +64,29 @@ const Index = () => {
           <div className="flex flex-col md:flex-row gap-6 items-center">
             <UserJourneyStep 
               step={1}
-              phase="Discovery" 
-              actions={["Search destinations", "Browse listings", "Read reviews"]}
-              emotions={["Excitement", "Curiosity", "Overwhelm"]}
-              touchpoints={["Google Search", "Social Media", "Airbnb Homepage"]}
+              title="Discovery" 
+              description="Users search destinations, browse listings, and read reviews while feeling excitement, curiosity, and sometimes overwhelm through Google Search, Social Media, and Airbnb Homepage"
             />
             <UserJourneyStep 
               step={2}
-              phase="Evaluation" 
-              actions={["Compare options", "Check availability", "Calculate costs"]}
-              emotions={["Careful", "Analytical", "Concerned"]}
-              touchpoints={["Listing pages", "Reviews", "Photos"]}
+              title="Evaluation" 
+              description="Users compare options, check availability, and calculate costs while feeling careful, analytical, and concerned through listing pages, reviews, and photos"
             />
             <UserJourneyStep 
               step={3}
-              phase="Booking" 
-              actions={["Contact host", "Submit request", "Make payment"]}
-              emotions={["Hopeful", "Anxious", "Committed"]}
-              touchpoints={["Messaging", "Booking form", "Payment system"]}
+              title="Booking" 
+              description="Users contact hosts, submit requests, and make payments while feeling hopeful, anxious, and committed through messaging, booking forms, and payment systems"
             />
             <UserJourneyStep 
               step={4}
-              phase="Experience" 
-              actions={["Check-in", "Stay", "Explore area"]}
-              emotions={["Satisfied", "Relaxed", "Adventurous"]}
-              touchpoints={["Property", "Host", "Local area"]}
+              title="Experience" 
+              description="Users check-in, stay, and explore the area while feeling satisfied, relaxed, and adventurous through the property, host interactions, and local area"
             />
             <UserJourneyStep 
               step={5}
-              phase="Post-Stay" 
-              actions={["Leave review", "Share photos", "Plan next trip"]}
-              emotions={["Nostalgic", "Grateful", "Inspired"]}
-              touchpoints={["Review system", "Social sharing", "Email campaigns"]}
+              title="Post-Stay" 
+              description="Users leave reviews, share photos, and plan next trips while feeling nostalgic, grateful, and inspired through review systems, social sharing, and email campaigns"
+              isLast={true}
             />
           </div>
         </div>
@@ -123,10 +121,34 @@ const Index = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Key Metrics Analysis</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  <MetricCard title="Search Conversion" metric="3.2%" trend="up" />
-                  <MetricCard title="Booking Rate" metric="12.8%" trend="down" />
-                  <MetricCard title="User Retention" metric="67%" trend="up" />
-                  <MetricCard title="Host Satisfaction" metric="4.2/5" trend="stable" />
+                  <MetricCard 
+                    title="Search Conversion" 
+                    metrics={["3.2% conversion rate", "15% bounce rate"]} 
+                    icon={<TrendingUp />}
+                    statistic="3.2%"
+                    growthPercentage={5}
+                  />
+                  <MetricCard 
+                    title="Booking Rate" 
+                    metrics={["12.8% booking rate", "Average 3.2 sessions"]} 
+                    icon={<Users />}
+                    statistic="12.8%"
+                    growthPercentage={-2}
+                  />
+                  <MetricCard 
+                    title="User Retention" 
+                    metrics={["67% return users", "4.2 avg sessions"]} 
+                    icon={<Users />}
+                    statistic="67%"
+                    growthPercentage={8}
+                  />
+                  <MetricCard 
+                    title="Host Satisfaction" 
+                    metrics={["4.2/5 rating", "89% satisfaction"]} 
+                    icon={<Star />}
+                    statistic="4.2/5"
+                    growthPercentage={0}
+                  />
                 </div>
               </div>
               
@@ -374,15 +396,17 @@ const Index = () => {
                   image="/placeholder.svg"
                   title="Cozy Downtown Loft"
                   location="San Francisco, CA"
-                  price={89}
+                  price="$89"
                   rating={4.8}
+                  reviewCount={124}
                 />
                 <ListingCard 
                   image="/placeholder.svg"
                   title="Beachfront Villa"
                   location="Malibu, CA"
-                  price={245}
+                  price="$245"
                   rating={4.9}
+                  reviewCount={89}
                 />
               </div>
             </Wireframe>
@@ -517,10 +541,34 @@ const Index = () => {
           <SectionTitle title="9. Success Metrics & KPIs" subtitle="Measuring the impact of our design improvements" accentColor="red" />
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <MetricCard title="Conversion Rate" metric="4.8%" trend="up" description="Search to booking conversion" />
-            <MetricCard title="User Satisfaction" metric="4.7/5" trend="up" description="Post-stay survey ratings" />
-            <MetricCard title="Time to Book" metric="3.2 min" trend="down" description="Average booking completion time" />
-            <MetricCard title="Host Revenue" metric="+18%" trend="up" description="Average monthly revenue increase" />
+            <MetricCard 
+              title="Conversion Rate" 
+              metrics={["4.8% conversion", "Search to booking"]} 
+              icon={<TrendingUp />}
+              statistic="4.8%"
+              growthPercentage={12}
+            />
+            <MetricCard 
+              title="User Satisfaction" 
+              metrics={["4.7/5 rating", "Post-stay surveys"]} 
+              icon={<Star />}
+              statistic="4.7/5"
+              growthPercentage={8}
+            />
+            <MetricCard 
+              title="Time to Book" 
+              metrics={["3.2 min average", "Booking completion"]} 
+              icon={<Users />}
+              statistic="3.2 min"
+              growthPercentage={-25}
+            />
+            <MetricCard 
+              title="Host Revenue" 
+              metrics={["+18% increase", "Monthly revenue"]} 
+              icon={<DollarSign />}
+              statistic="+18%"
+              growthPercentage={18}
+            />
           </div>
           
           <Wireframe title="Success Metrics Dashboard" className="max-w-6xl mx-auto">
