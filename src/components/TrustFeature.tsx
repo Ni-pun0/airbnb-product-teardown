@@ -1,29 +1,53 @@
+
 import React from 'react';
+import { Shield, Star, Lock, Headphones } from 'lucide-react';
+
 interface TrustFeatureProps {
-  icon: React.ReactNode;
+  icon: string;
   title: string;
   description: string;
-  statistic?: string;
+  metrics?: string;
 }
+
 const TrustFeature = ({
   icon,
   title,
   description,
-  statistic
+  metrics
 }: TrustFeatureProps) => {
-  return <div className="flex gap-4 bg-white rounded-lg p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all">
-      <div className="flex-shrink-0 h-14 w-14 rounded-full bg-airbnb bg-opacity-10 text-airbnb flex items-center justify-center">
-        {icon}
+  const getIcon = () => {
+    switch (icon) {
+      case 'shield-check':
+        return <Shield className="w-6 h-6" />;
+      case 'star':
+        return <Star className="w-6 h-6" />;
+      case 'lock':
+        return <Lock className="w-6 h-6" />;
+      case 'headphones':
+        return <Headphones className="w-6 h-6" />;
+      default:
+        return <Shield className="w-6 h-6" />;
+    }
+  };
+
+  return (
+    <div className="flex gap-4 bg-white rounded-lg p-5 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+      <div className="flex-shrink-0 h-14 w-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+        {getIcon()}
       </div>
       <div>
         <div className="flex items-center gap-2 mb-1">
           <h3 className="font-semibold">{title}</h3>
-          {statistic && <span className="py-1 bg-airbnb text-white rounded-full text-xs font-medium text-center px-[6px]">
-              {statistic}
-            </span>}
+          {metrics && (
+            <span className="py-1 bg-primary text-white rounded-full text-xs font-medium text-center px-[6px]">
+              {metrics}
+            </span>
+          )}
         </div>
         <p className="text-sm text-gray-600">{description}</p>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default TrustFeature;
