@@ -599,7 +599,7 @@ const Index = () => {
                 {/* Feature dots with data labels */}
                 <div className="absolute top-[20%] left-[25%] h-5 w-5 rounded-full bg-airbnb flex items-center justify-center text-white text-xs font-bold" title="Secure Payments">1</div>
                 <div className="absolute top-[23%] left-[25%] text-[10px] my-[24px]">Secure Payments</div>
-                <div className="absolute top-[18%] left-[25%] text-[9px] bg-opacity-20 px-1 rounded mx-0 bg-[FFDFDF] bg-[#ffdfdf] my-[27px]">98% critical</div>
+                <div className="absolute top-[18%] left-[25%] text-[9px] bg-opacity-20 px-1 rounded mx-0 bg-[FFDFDF] my-[27px] bg-[#ffdfdf]">98% critical</div>
                 
                 <div className="absolute top-[15%] left-[70%] h-5 w-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold" title="AI Recommendations">2</div>
                 <div className="absolute top-[18%] left-[70%] text-[10px] my-[24px]">AI Recommendations</div>
