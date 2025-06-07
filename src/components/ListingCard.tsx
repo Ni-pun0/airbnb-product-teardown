@@ -2,34 +2,38 @@
 import React from 'react';
 
 interface ListingCardProps {
-  image: string;
   title: string;
-  location: string;
-  price: string;
-  rating: number;
-  reviewCount: number;
+  subtitle: string;
+  image: string;
+  features: string[];
+  cta: string;
 }
 
-const ListingCard = ({ image, title, location, price, rating, reviewCount }: ListingCardProps) => {
+const ListingCard = ({ title, subtitle, image, features, cta }: ListingCardProps) => {
   return (
-    <div className="group">
-      <div className="aspect-square rounded-xl overflow-hidden bg-gray-100 mb-2">
-        <div className="h-full w-full bg-gray-200 flex items-center justify-center text-gray-400">
-          {image}
-        </div>
+    <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
+      <div className="h-48 bg-gray-200 flex items-center justify-center">
+        <span className="text-gray-500">📊</span>
       </div>
-      <div className="flex justify-between items-start">
-        <div>
-          <h3 className="font-medium">{title}</h3>
-          <p className="text-sm text-gray-500">{location}</p>
-          <p className="text-sm mt-1">
-            <span className="font-semibold">{price}</span> night
-          </p>
+      
+      <div className="p-6">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-1">{title}</h3>
+          <p className="text-sm text-gray-600">{subtitle}</p>
         </div>
-        <div className="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          <span className="text-sm">{rating} <span className="text-gray-500">({reviewCount})</span></span>
-        </div>
+        
+        <ul className="space-y-2 mb-6">
+          {features.map((feature, i) => (
+            <li key={i} className="flex items-center gap-2 text-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-airbnb"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+        
+        <button className="w-full bg-airbnb text-white py-2 px-4 rounded-lg font-medium hover:bg-airbnb/90 transition-colors">
+          {cta}
+        </button>
       </div>
     </div>
   );
