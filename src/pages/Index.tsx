@@ -598,48 +598,48 @@ const Index = () => {
                 
                 {/* Feature dots with data labels */}
                 <div className="absolute top-[20%] left-[25%] h-5 w-5 rounded-full bg-airbnb flex items-center justify-center text-white text-xs font-bold" title="Secure Payments">1</div>
-                <div className="absolute top-[23%] left-[25%] text-[10px]">Secure Payments</div>
-                <div className="absolute top-[18%] left-[25%] text-[9px] bg-airbnb bg-opacity-20 px-1 rounded">98% critical</div>
+                <div className="absolute top-[23%] left-[25%] text-[10px] my-[24px]">Secure Payments</div>
+                <div className="absolute top-[18%] left-[25%] text-[9px] bg-opacity-20 px-1 rounded mx-0 bg-[FFDFDF] bg-[#ffdfdf] my-[27px]">98% critical</div>
                 
                 <div className="absolute top-[15%] left-[70%] h-5 w-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold" title="AI Recommendations">2</div>
-                <div className="absolute top-[18%] left-[70%] text-[10px]">AI Recommendations</div>
-                <div className="absolute top-[13%] left-[70%] text-[9px] bg-blue-100 px-1 rounded">+42% conversion</div>
+                <div className="absolute top-[18%] left-[70%] text-[10px] my-[24px]">AI Recommendations</div>
+                <div className="absolute top-[13%] left-[70%] text-[9px] bg-blue-100 px-1 rounded mx-0 my-[27px]">+42% conversion</div>
                 
                 <div className="absolute top-[30%] left-[40%] h-5 w-5 rounded-full bg-airbnb flex items-center justify-center text-white text-xs font-bold" title="Reviews">3</div>
-                <div className="absolute top-[33%] left-[40%] text-[10px]">Reviews System</div>
-                <div className="absolute top-[28%] left-[40%] text-[9px] bg-airbnb bg-opacity-20 px-1 rounded">91% trust factor</div>
+                <div className="absolute top-[33%] left-[40%] text-[10px] my-[24px]">Reviews System</div>
+                <div className="absolute top-[28%] left-[40%] text-[9px] bg-opacity-20 px-1 rounded bg-[#ffdfdf] my-[27px]">91% trust factor</div>
                 
                 <div className="absolute top-[25%] left-[85%] h-5 w-5 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold" title="Virtual Tours">4</div>
-                <div className="absolute top-[28%] left-[85%] text-[10px]">Virtual Tours</div>
-                <div className="absolute top-[23%] left-[85%] text-[9px] bg-green-100 px-1 rounded">+36% engagement</div>
+                <div className="absolute top-[28%] left-[85%] text-[10px] my-[24px]">Virtual Tours</div>
+                <div className="absolute top-[23%] left-[85%] text-[9px] bg-green-100 px-1 rounded my-[27px]">+36% engagement</div>
                 
                 <div className="absolute top-[40%] left-[20%] h-5 w-5 rounded-full bg-airbnb flex items-center justify-center text-white text-xs font-bold" title="Messaging">5</div>
-                <div className="absolute top-[43%] left-[20%] text-[10px]">Messaging</div>
-                <div className="absolute top-[38%] left-[20%] text-[9px] bg-airbnb bg-opacity-20 px-1 rounded">87% use rate</div>
+                <div className="absolute top-[43%] left-[20%] text-[10px] py-0 my-[24px]">Messaging</div>
+                <div className="absolute top-[38%] left-[20%] text-[9px] bg-opacity-20 px-1 rounded my-[27px] bg-[#ffdfdf]">87% use rate</div>
                 
                 <div className="absolute top-[60%] left-[30%] h-5 w-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold" title="Calendar Sync">6</div>
-                <div className="absolute top-[63%] left-[30%] text-[10px]">Calendar Sync</div>
-                <div className="absolute top-[58%] left-[30%] text-[9px] bg-blue-100 px-1 rounded">72% adoption</div>
+                <div className="absolute top-[63%] left-[30%] text-[10px] my-[24px]">Calendar Sync</div>
+                <div className="absolute top-[58%] left-[30%] text-[9px] bg-blue-100 px-1 rounded my-[27px]">72% adoption</div>
                 
                 <div className="absolute top-[35%] left-[60%] h-5 w-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold" title="Dynamic Pricing">7</div>
-                <div className="absolute top-[38%] left-[60%] text-[10px]">Dynamic Pricing</div>
-                <div className="absolute top-[33%] left-[60%] text-[9px] bg-blue-100 px-1 rounded">+18% revenue</div>
+                <div className="absolute top-[38%] left-[60%] text-[10px] my-[24px]">Dynamic Pricing</div>
+                <div className="absolute top-[33%] left-[60%] text-[9px] bg-blue-100 px-1 rounded my-[27px]">+18% revenue</div>
                 
                 <div className="absolute top-[45%] left-[75%] h-5 w-5 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold" title="Experiences">8</div>
-                <div className="absolute top-[48%] left-[75%] text-[10px]">Experiences</div>
-                <div className="absolute top-[43%] left-[75%] text-[9px] bg-green-100 px-1 rounded">$1.7B market</div>
+                <div className="absolute top-[48%] left-[75%] text-[10px] my-[24px]">Experiences</div>
+                <div className="absolute top-[43%] left-[75%] text-[9px] bg-green-100 px-1 rounded my-[27px]">$1.7B market</div>
                 
                 <div className="absolute top-[70%] left-[65%] h-5 w-5 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold" title="Sustainability">9</div>
-                <div className="absolute top-[73%] left-[65%] text-[10px]">Eco Badges</div>
-                <div className="absolute top-[68%] left-[65%] text-[9px] bg-green-100 px-1 rounded">+16% premium</div>
+                <div className="absolute top-[73%] left-[65%] text-[10px] my-[24px]">Eco Badges</div>
+                <div className="absolute top-[68%] left-[65%] text-[9px] bg-green-100 px-1 rounded my-[27px]">+16% premium</div>
                 
                 <div className="absolute top-[80%] left-[45%] h-5 w-5 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold" title="Group">10</div>
-                <div className="absolute top-[83%] left-[45%] text-[10px]">Group Planning</div>
-                <div className="absolute top-[78%] left-[45%] text-[9px] bg-green-100 px-1 rounded">Low priority</div>
+                <div className="absolute top-[83%] left-[45%] text-[10px] my-[24px]">Group Planning</div>
+                <div className="absolute top-[78%] left-[45%] text-[9px] bg-green-100 px-1 rounded my-[27px]">Low priority</div>
                 
                 <div className="absolute top-[75%] left-[15%] h-5 w-5 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold" title="Wishlists">11</div>
-                <div className="absolute top-[78%] left-[15%] text-[10px]">Wishlists</div>
-                <div className="absolute top-[73%] left-[15%] text-[9px] bg-blue-100 px-1 rounded">64% usage</div>
+                <div className="absolute top-[78%] left-[15%] text-[10px] my-[24px]">Wishlists</div>
+                <div className="absolute top-[73%] left-[15%] text-[9px] bg-blue-100 px-1 rounded my-[27px]">64% usage</div>
               </div>
             </div>
           </Wireframe>
