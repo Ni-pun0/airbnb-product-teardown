@@ -35,6 +35,22 @@ const Wireframe = ({ title, children, className, tagStyle = 'none', ...props }: 
     }
   };
 
+  // Check if this is the Feature Impact Map section
+  if (title === "Feature Impact Map") {
+    return (
+      <div className={cn("wireframe relative bg-white border rounded-lg p-6 shadow-sm", className)} {...props}>
+        {renderTag()}
+        <div className="w-full">
+          <img 
+            src="/lovable-uploads/060e8bb9-877f-43ad-8cf6-bd11637679c4.png" 
+            alt="Feature Impact Map - Based on 2023 User Research"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={cn("wireframe relative bg-white border rounded-lg p-6 shadow-sm", className)} {...props}>
       {renderTag()}
