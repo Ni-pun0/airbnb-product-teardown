@@ -230,13 +230,13 @@ const Index = () => {
                     <span>Post-pandemic remote work culture driving extended stays</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">
+                    <div className="h-6 w-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
                       +62%
                     </div>
                     <span>Shifts from urban tourism to rural retreats and unique stays</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold">
+                    <div className="h-6 w-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
                       35+
                     </div>
                     <span>Cities with new short-term rental regulations since 2020</span>
