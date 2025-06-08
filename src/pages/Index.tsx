@@ -224,19 +224,19 @@ const Index = () => {
               <Wireframe title="Market Trends">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
+                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs font-bold">
                       +47%
                     </div>
                     <span>Post-pandemic remote work culture driving extended stays</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
+                    <div className="h-6 w-6 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-bold">
                       +62%
                     </div>
                     <span>Shifts from urban tourism to rural retreats and unique stays</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
+                    <div className="h-6 w-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-xs font-bold">
                       35+
                     </div>
                     <span>Cities with new short-term rental regulations since 2020</span>
@@ -582,7 +582,7 @@ const Index = () => {
                 </div>
                 
                 {/* X-axis label */}
-                <div className="absolute bottom-[-28px] left-1/2 -translate-x-1/2 text-sm text-gray-500 font-medium">
+                <div className="absolute bottom-[-28px] left-1/2 -translate-x-1/2 text-sm text-gray-500 font-medium mx-0 my-[7px]">
                   Implementation Effort
                 </div>
                 
