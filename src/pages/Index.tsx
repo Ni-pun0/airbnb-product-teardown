@@ -224,7 +224,7 @@ const Index = () => {
               <Wireframe title="Market Trends">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-sm">
-                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs font-bold">
+                    <div className="h-6 w-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs font-bold px-[20px]">
                       +47%
                     </div>
                     <span>Post-pandemic remote work culture driving extended stays</span>
