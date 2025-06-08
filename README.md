@@ -1,8 +1,22 @@
-# Welcome to your Lovable project
+# Welcome to the Airbnb Product Teardown
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/bdd53e46-7231-4e80-aede-1ef61c42c9f7
+**Live Preview**: https://preview--airbnb-product-teardown.lovable.app/
+
+## What is this project?
+
+This is a deep-dive **Product Teardown of Airbnb**, showcasing the product, design, and user experience strategies that power one of the most trusted marketplaces in the world.
+
+Unlike typical case studies, this teardown reflects deliberate and research-driven efforts across:
+
+- **User Experience (UX) Research**
+- **Product Strategy Deconstruction**
+- **Component-Based Interface Design**
+- **Content Architecture & Narrative Thinking**
+- **Performance-Optimized Front-End Engineering**
+
+The goal is to **educate, inspire, and reveal the product decisions** that make Airbnb's digital experience world-class.
 
 ## How can I edit this code?
 
@@ -16,58 +30,38 @@ Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
 **Edit a file directly in GitHub**
 
 - Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Click the "Edit" button (pencil icon) at the top right.
+- Make your changes and commit them.
 
 **Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
+- Go to your repository on GitHub.
+- Click the "Code" button.
 - Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Click "New codespace" to launch the editing environment.
 
 ## What technologies are used for this project?
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite**
+- **TypeScript**
+- **React**
+- **shadcn-ui**
+- **Tailwind CSS**
 
-## How can I deploy this project?
+## What was involved in building this?
 
-Simply open [Lovable](https://lovable.dev/projects/bdd53e46-7231-4e80-aede-1ef61c42c9f7) and click on Share -> Publish.
+- 🔍 **UX Heuristics & Flow Analysis** – Mapping Airbnb's user journey and decision architecture.
+- 🧠 **Product Thinking** – Teardown of core business logic and value delivery mechanisms.
+- 🎨 **Design System Integration** – A modular, scalable approach to UI with Tailwind and shadcn-ui.
+- ⚙️ **Modern Front-End Stack** – Built for speed and clarity using Vite + TypeScript + React.
+- ✍️ **Narrative-Driven Content** – Every section contextualizes the 'why' behind product elements.
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This teardown is intended for educational and demonstration purposes only.  
+All brand assets, trademarks, and logos remain the property of Airbnb, Inc.
